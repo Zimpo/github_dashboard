@@ -1,5 +1,6 @@
 package com.zimpo.githubdashboard.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -76,10 +77,13 @@ public class UserActivity extends AppCompatActivity {
         repoAdapter = new RepoAdapter(getApplicationContext(), new RepoAdapter.OnItemClickListener() {
             @Override
             public void onItemClickListener(Repo repo) {
-                /*TODO*/
+                Intent intent = new Intent(getApplicationContext(), RepoActivity.class);
+                intent.putExtra("EXTRA_USER", user);
+                intent.putExtra("EXTRA_REPO", repo);
+                startActivity(intent);
             }
         });
-        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, true);
+        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
         repoRV.setLayoutManager(linearLayoutManager);
         repoRV.setAdapter(repoAdapter);
 

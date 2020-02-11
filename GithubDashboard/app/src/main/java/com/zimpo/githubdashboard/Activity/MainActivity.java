@@ -46,7 +46,22 @@ public class MainActivity extends AppCompatActivity {
 
     public void searchUser()
     {
+        searchB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (searchET.getText().toString().length() > 0)
+                {
+                    warningTV.setVisibility(View.GONE);
 
+                    Intent intent = new Intent(getApplicationContext(), UserListActivity.class);
+                    intent.putExtra("EXTRA_SEARCH", searchET.getText().toString());
+                    startActivity(intent);
+
+                }
+                else
+                    warningTV.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     public void getUser()

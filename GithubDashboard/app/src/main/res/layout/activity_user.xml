@@ -42,12 +42,23 @@
             android:textColor="@color/colorBlack"
             android:textSize="16dp"/>
 
+        <TextView
+            android:id="@+id/nameListTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/descTV"
+            android:layout_margin="20dp"
+            android:text="Liste des repos"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlack" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/repoRV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scrollbars="vertical"
-            android:layout_below="@id/descTV"/>
+            android:layout_below="@id/nameListTV"/>
 
     </RelativeLayout>
 

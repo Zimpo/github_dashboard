@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/headerRL"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/drawable_button">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iconIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/github"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:id="@+id/loginTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iconIV"
+        android:layout_alignTop="@id/iconIV"
+        android:layout_marginLeft="20dp"
+        android:text=""
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/urlTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/iconIV"
+            android:layout_below="@id/loginTV"
+            android:layout_marginLeft="20dp"
+            android:text="Nom"
+            android:textColor="@color/colorWhite"
+            android:textStyle="italic"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bodyRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/languageTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/nameTV"
+            android:text=""
+            android:textSize="16dp" />
+
+        <RelativeLayout
+            android:id="@+id/starRL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/languageTV"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/starIV"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/star"/>
+
+            <TextView
+                android:id="@+id/starTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/starIV"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="0"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/descTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_below="@id/starRL"
+            android:text=""
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="right"
+            android:layout_below="@id/descTV"
+            android:textStyle="italic"
+            android:text=""
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

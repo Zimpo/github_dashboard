@@ -69,16 +69,25 @@ public class RepoAdapter extends RecyclerView.Adapter<RepoAdapter.RepoViewHolder
     public class RepoViewHolder extends RecyclerView.ViewHolder
     {
         //VARIABLES
+        RelativeLayout repoRL;
         TextView nameTV;
 
         public RepoViewHolder(View itemView) {
             super(itemView);
 
+            repoRL = (RelativeLayout) itemView.findViewById(R.id.repoRL);
             nameTV = (TextView) itemView.findViewById(R.id.nameTV);
         }
 
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         public void Bind(final Repo repo) {
+
+            repoRL.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClickListener(repo);
+                }
+            });
 
             nameTV.setText(repo.getName());
         }

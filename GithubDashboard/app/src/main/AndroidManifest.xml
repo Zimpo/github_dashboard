@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity.UserActivity" />
+        <activity android:name=".Activity.UserListActivity" />
+        <activity android:name=".Activity.RepoActivity" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
